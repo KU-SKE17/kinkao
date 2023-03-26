@@ -35,4 +35,6 @@ demo-project: ku.kinkao
    - create [templates/signup.html](src/main/resources/templates/signup.html)
    - modify [config/SecurityConfig.java](src/main/java/ku/kinkao/config/SecurityConfig.java)
 9. add Restaurant form
-   - create []()
+   > **test**: try run and visit http://localhost:8090/restaurant/add after login
+   - create [templates/restaurant-add.html](src/main/resources/templates/restaurant-add.html)
+   - modify [controller/RestaurantController.java](src/main/java/ku/kinkao/controller/RestaurantController.java)
