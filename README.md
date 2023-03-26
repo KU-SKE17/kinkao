@@ -90,3 +90,14 @@ demo-project: ku.kinkao
       - Authorized redirect URIs: `http://localhost:8090/login/oauth2/code/google`
     - modify [application.properties](src/main/resources/application.properties)
     - modify [templates/login.html](src/main/resources/templates/login.html)
+
+12. connect to MySQL
+
+    - add MySQL dependency (mysql-connector-j) to `pom.xml`
+    - modify [application.properties](src/main/resources/application.properties)
+    - run docker `docker run --name=mysql_kinkao -e MYSQL_ROOT_PASSWORD=abc123 -e MYSQL_DATABASE=restaurant -p 3307:3306 -d mysql`
+    - add Lombok dependency and dependency configuration to `pom.xml`
+    - modify [model/Restaurant.java](src/main/java/ku/kinkao/model/Restaurant.java)
+    - modify [model/Member.java](src/main/java/ku/kinkao/model/Member.java)
+    - modify [repository/RestaurantRepository.java](src/main/java/ku/kinkao/repository/RestaurantRepository.java)
+    - modify [repository/MemberRepository.java](src/main/java/ku/kinkao/repository/MemberRepository.java)
