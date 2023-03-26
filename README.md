@@ -78,3 +78,6 @@ demo-project: ku.kinkao
       Authorization callback URL : `http://localhost:8090/login/oauth2/code/github`
     - modify [application.properties](src/main/resources/application.properties)
     - modify [config/SecurityConfig.java](src/main/java/ku/kinkao/config/SecurityConfig.java)
+    - create [config/UserServicesConfiguration.java](src/main/java/ku/kinkao/config/UserServicesConfiguration.java)
+    - modify [config/SecurityConfig.java](src/main/java/ku/kinkao/config/SecurityConfig.java)
+    - modify [templates/login.html](src/main/resources/templates/login.html)
