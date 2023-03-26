@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.UUID;
+import java.time.Instant;
 
 @Data
 @NoArgsConstructor
@@ -19,6 +20,7 @@ public class Restaurant {
     private String name;
     private String address;
     private int rating;
+    private Instant createdAt;
 
     public UUID getId() {
         return id;

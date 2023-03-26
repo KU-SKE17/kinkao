@@ -101,3 +101,17 @@ demo-project: ku.kinkao
     - modify [model/Member.java](src/main/java/ku/kinkao/model/Member.java)
     - modify [repository/RestaurantRepository.java](src/main/java/ku/kinkao/repository/RestaurantRepository.java)
     - modify [repository/MemberRepository.java](src/main/java/ku/kinkao/repository/MemberRepository.java)
+
+13. Separating Transmission Data (DTO) and Database Data (DAO)
+
+    - add Model Mapper dependency (modelmapper) to `pom.xml`
+    - create [config/ComponentConfig.java](src/main/java/ku/kinkao/config/ComponentConfig.java)
+    - create [dto/RestaurantDto.java](src/main/java/ku/kinkao/dto/RestaurantDto.java)
+    - create [dto/SignupDto.java](src/main/java/ku/kinkao/dto/SignupDto.java)
+    - create [service/RestaurantService.java](src/main/java/ku/kinkao/service/RestaurantService.java)
+    - modify [model/Member.java](src/main/java/ku/kinkao/model/Member.java)
+    - modify [model/Restaurant.java](src/main/java/ku/kinkao/model/Restaurant.java)
+    - modify [SignupController.java](src/main/java/ku/kinkao/controller/SignupController.java)
+    - modify [RestaurantController.java](src/main/java/ku/kinkao/controller/RestaurantController.java)
+    - modify [RestaurantRepository.java](src/main/java/ku/kinkao/repository/RestaurantRepository.java)
+    - modify [service/SignupService.java](src/main/java/ku/kinkao/service/SignupService.java)

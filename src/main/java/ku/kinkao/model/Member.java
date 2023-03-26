@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.UUID;
+import java.time.Instant;
 
 @Data
 @NoArgsConstructor
@@ -20,6 +21,7 @@ public class Member {
     private String password;
     private String firstName;
     private String lastName;
+    private Instant createdAt;
 
     // .... generate getter/setter for all attributes
 

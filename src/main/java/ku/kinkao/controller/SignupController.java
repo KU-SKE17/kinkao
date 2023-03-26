@@ -1,6 +1,6 @@
 package ku.kinkao.controller;
 
-import ku.kinkao.model.Member;
+import ku.kinkao.dto.SignupDto;
 import ku.kinkao.service.SignupService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,7 +21,7 @@ public class SignupController {
     }
 
     @PostMapping("/signup")
-    public String signupMember(@ModelAttribute Member member, Model model) {
+    public String signupMember(@ModelAttribute SignupDto member, Model model) {
         String signupError = null;
 
         if (!signupService.isUsernameAvailable(member.getUsername())) {
@@ -29,7 +29,7 @@ public class SignupController {
         }
 
         if (signupError == null) {
-            int rowsAdded = signupService.createMember(member);
+            int rowsAdded = signupService.createUser(member);
             if (rowsAdded < 0) {
                 signupError = "There was an error signing you up. Please try again.";
             }
