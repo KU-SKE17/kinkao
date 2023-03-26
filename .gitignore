@@ -15,6 +15,7 @@
 
 ### Eclipse ###
 
+.env
 .metadata
 bin/
 tmp/

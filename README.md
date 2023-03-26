@@ -70,3 +70,11 @@ demo-project: ku.kinkao
    - create [controller/AuthController.java](src/main/java/ku/kinkao/controller/AuthController.java)
    - create [templates/login.html](src/main/resources/templates/login.html)
    - modify [config/SecurityConfig.java](src/main/java/ku/kinkao/config/SecurityConfig.java)
+
+10. add login with GitHub (SSO with OAuth)
+
+    - add OAuth dependency (spring-boot-starter-oauth2-client) to `pom.xml`
+    - add Github OAuth app -> [here](https://github.com/settings/applications/new)
+      Authorization callback URL : `http://localhost:8090/login/oauth2/code/github`
+    - modify [application.properties](src/main/resources/application.properties)
+    - modify [config/SecurityConfig.java](src/main/java/ku/kinkao/config/SecurityConfig.java)
