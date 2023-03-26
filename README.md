@@ -75,9 +75,18 @@ demo-project: ku.kinkao
 
     - add OAuth dependency (spring-boot-starter-oauth2-client) to `pom.xml`
     - add Github OAuth app -> [here](https://github.com/settings/applications/new)
-      Authorization callback URL : `http://localhost:8090/login/oauth2/code/github`
+      - Authorization callback URL : `http://localhost:8090/login/oauth2/code/github`
     - modify [application.properties](src/main/resources/application.properties)
     - modify [config/SecurityConfig.java](src/main/java/ku/kinkao/config/SecurityConfig.java)
     - create [config/UserServicesConfiguration.java](src/main/java/ku/kinkao/config/UserServicesConfiguration.java)
     - modify [config/SecurityConfig.java](src/main/java/ku/kinkao/config/SecurityConfig.java)
+    - modify [templates/login.html](src/main/resources/templates/login.html)
+
+11. add login with Google
+
+    - add Google OAuth project -> [here](https://console.developers.google.com/apis/dashboard)
+      - OAuth consent screen: Internal
+      - then go to Credentials to get client keys
+      - Authorized redirect URIs: `http://localhost:8090/login/oauth2/code/google`
+    - modify [application.properties](src/main/resources/application.properties)
     - modify [templates/login.html](src/main/resources/templates/login.html)
