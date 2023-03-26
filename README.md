@@ -38,3 +38,4 @@ demo-project: ku.kinkao
    > **test**: try run and visit http://localhost:8090/restaurant/add after login
    - create [templates/restaurant-add.html](src/main/resources/templates/restaurant-add.html)
    - modify [controller/RestaurantController.java](src/main/java/ku/kinkao/controller/RestaurantController.java)
+10. add Navigation bar (create [templates/fragments/header.html](src/main/resources/templates/fragments/header.html), and modify others html in [/templates](src/main/resources/templates))
