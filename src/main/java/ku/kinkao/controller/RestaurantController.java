@@ -1,6 +1,6 @@
 package ku.kinkao.controller;
 
-import ku.kinkao.dto.RestaurantDto;
+import ku.kinkao.dto.RestaurantRequest;
 import ku.kinkao.service.RestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,8 +27,8 @@ public class RestaurantController {
     }
 
     @PostMapping("/restaurant/add")
-    public String addRestaurant(@ModelAttribute RestaurantDto restaurant,
-            Model model) {
+    public String addRestaurant(@ModelAttribute RestaurantRequest restaurant,
+                                Model model) {
         restaurantService.create(restaurant);
         return "redirect:/restaurant";
     }
