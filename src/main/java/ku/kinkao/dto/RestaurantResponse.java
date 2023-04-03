@@ -1,13 +1,20 @@
 package ku.kinkao.dto;
 
 import lombok.Data;
+import org.hibernate.validator.constraints.Range;
 
-import java.util.UUID;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Data
 public class RestaurantResponse {
-    private UUID id;
+    @NotBlank
     private String name;
+
+    @NotBlank
     private String address;
-    private int rating;
+
+    @NotNull
+    @Range(min = 1, max = 5)
+    private Integer rating;
 }
