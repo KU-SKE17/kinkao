@@ -115,3 +115,5 @@ demo-project: ku.kinkao
     - modify [RestaurantController.java](src/main/java/ku/kinkao/controller/RestaurantController.java)
     - modify [RestaurantRepository.java](src/main/java/ku/kinkao/repository/RestaurantRepository.java)
     - modify [service/SignupService.java](src/main/java/ku/kinkao/service/SignupService.java)
+
+14. Check password
