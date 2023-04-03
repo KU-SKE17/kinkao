@@ -117,3 +117,5 @@ demo-project: ku.kinkao
     - modify [service/SignupService.java](src/main/java/ku/kinkao/service/SignupService.java)
 
 14. Check password
+
+15. Check user's email
