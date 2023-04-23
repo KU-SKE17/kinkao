@@ -40,8 +40,10 @@ public class SecurityConfig {
                 .mvcMatchers(HttpMethod.POST, "/api/review")
                 .hasAuthority("SCOPE_create:reviews")
 
-                .antMatchers("/home", "/signup",
-                        "/css/**", "/js/**").permitAll().antMatchers("/restaurant/add")
+                .antMatchers("/home", "/signup", "/css/**", "/js/**")
+                .permitAll()
+
+                .antMatchers("/restaurant/add")
                 .access("hasRole('ROLE_ADMIN')")
                 .antMatchers("/restaurant", "/review", "/review/**")
                 .access("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")
