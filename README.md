@@ -126,5 +126,7 @@ demo-project: ku.kinkao
 17. Adding roles to user data
 
     - [demo-project-3](https://github.com/KU-SKE17/book)
-    -
-18. Setting up scopes in Auth0
+
+18. Setting up scopes in Auth0 && error page
+
+19. Logging
