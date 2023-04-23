@@ -1,8 +1,10 @@
 package ku.kinkao.model;
 
+import ku.kinkao.config.AttributeEncryptor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -18,8 +20,10 @@ public class Member {
     @GeneratedValue
     private UUID id;
 
+    @Convert(converter = AttributeEncryptor.class)
     private String username;
     private String password;
+    @Convert(converter = AttributeEncryptor.class)
     private String firstName;
     private String lastName;
     private String email;

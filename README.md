@@ -130,3 +130,5 @@ demo-project: ku.kinkao
 18. Setting up scopes in Auth0 && error page
 
 19. Logging
+
+20. Column-level encryption
