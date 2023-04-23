@@ -24,6 +24,10 @@ public class SignupDto {
     @NotBlank
     private String email;
 
+    @NotBlank
+    @Pattern(regexp = "^(ROLE_ADMIN|ROLE_USER)$", message = "Role is in an incorrect format.")
+    private String role;
+
     @NotBlank(message = "First name is required")
     private String firstName;
 

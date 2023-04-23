@@ -122,3 +122,7 @@ demo-project: ku.kinkao
 15. Check user's email
 
 16. Check password
+
+17. Adding roles to user data
+
+    - [demo-project-3](https://github.com/KU-SKE17/book)

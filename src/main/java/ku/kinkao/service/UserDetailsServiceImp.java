@@ -19,8 +19,7 @@ public class UserDetailsServiceImp implements UserDetailsService {
     private MemberRepository memberRepository;
 
     @Override
-    public UserDetails loadUserByUsername(String username)
-            throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
         Member member = memberRepository.findByUsername(username);
 
@@ -28,8 +27,9 @@ public class UserDetailsServiceImp implements UserDetailsService {
             throw new UsernameNotFoundException("Could not find user");
         }
 
-        return new org.springframework.security.core.userdetails.User(
-                member.getUsername(), member.getPassword(),
-                new ArrayList<>());
+        List<SimpleGrantedAuthority> authorities = new ArrayList<>();
+        authorities.add(new SimpleGrantedAuthority(member.getRole()));
+
+        return new org.springframework.security.core.userdetails.User(member.getUsername(), member.getPassword(), authorities);
     }
 }
