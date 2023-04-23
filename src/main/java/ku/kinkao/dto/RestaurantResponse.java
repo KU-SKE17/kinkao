@@ -5,9 +5,12 @@ import org.hibernate.validator.constraints.Range;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.util.UUID;
 
 @Data
 public class RestaurantResponse {
+    private UUID id;
+
     @NotBlank
     private String name;
 
